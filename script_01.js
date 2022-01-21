@@ -11,10 +11,10 @@ arr = [false,true,true];
 arr = ["Ich","bin","Maxine","Mützerich"];
 
 
-output(arr);
-output(arr.length);         // Anzahl der Elemente
-output(arr[0]);             // Index (1.Pos im Array)
-output(arr[arr.length -1]); // letzte Position
+// output(arr);
+// output(arr.length);         // Anzahl der Elemente
+// output(arr[0]);             // Index (1.Pos im Array)
+// output(arr[arr.length -1]); // letzte Position
 
 
 
@@ -25,19 +25,35 @@ output(arr[arr.length -1]); // letzte Position
 // --> "Ich bin Max Mütze."
 // output(getSentence("Ich","bin","Max","Mütze"));
 // output(getSentence("Ich","bin","Maxine","Mützerich"));
-function getSentence(word1,word2,word3,word4,word5) {
+function getSentence(word1,word2,word3,word4) {
 
     const gap  = " ";
     const pnct = ".";
     const str  =    word1 + gap + 
                     word2 + gap +
                     word3 + gap +
-                    word4 + gap +
-                    word5 +
+                    word4 + 
                     pnct;
     return str;
 }
 
+/** 01a. Funktionalität mit Array 1 */
+// Kritik | Überlegung
+// word1, word2, word3,  ..... wordN   :: Semantische Struktur
+// arr[0],arr[1],arr[2], ..... arr[n]  :: Numerische Struktur (0,1,2,3...n)
+// --> Transformation semantisches Problem --> mumerisches Problem
+output(getSentence(["Ich","bin","Maxine","Mützerich"]));
+function getSentence(arr) {
+
+    const gap  = " ";
+    const pnct = ".";
+    const str  =    arr[0] + gap + 
+                    arr[1] + gap +
+                    arr[2] + gap +
+                    arr[3] + 
+                    pnct;
+    return str;
+}
 
 
 // Modul: Ausgabe in Konsole : Test
