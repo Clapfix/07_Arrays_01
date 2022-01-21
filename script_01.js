@@ -4,11 +4,11 @@
 
 /*** 02. Theorie: Array ***/
 
-let arr;
-arr = [];
-arr = [2,4,7,11];
-arr = [false,true,true];
-arr = ["Ich","bin","Maxine","Mützerich"];
+// let arr;
+// arr = [];
+// arr = [2,4,7,11];
+// arr = [false,true,true];
+// arr = ["Ich","bin","Maxine","Mützerich"];
 
 
 // output(arr);
@@ -16,6 +16,27 @@ arr = ["Ich","bin","Maxine","Mützerich"];
 // output(arr[0]);             // Index (1.Pos im Array)
 // output(arr[arr.length -1]); // letzte Position
 
+/** 02a. Theorie: Schleifen (for-Schleife) */
+
+/** For - Schleife als Wiedergolungs-Struktur */
+
+// Inkrement (untere Grenze --> obere Grenze)
+// for (let i = 0; i< 20; i++) 
+// {
+//     output("index i :" +i);    
+// }
+
+// Dekrement (obere Grenze --> untere Grenze)
+// for (let i = 10; i> 0; i--) 
+// {
+//     output("index i :" +i);    
+// }
+
+//Inkrement (var. Schrittweite)
+// for (let i = 0; i <= 100; i+=5) 
+// {
+//     output("index i :" +i);    
+// }
 
 
 
@@ -42,7 +63,7 @@ function getSentence(word1,word2,word3,word4) {
 // word1, word2, word3,  ..... wordN   :: Semantische Struktur
 // arr[0],arr[1],arr[2], ..... arr[n]  :: Numerische Struktur (0,1,2,3...n)
 // --> Transformation semantisches Problem --> mumerisches Problem
-output(getSentence(["Ich","bin","Maxine","Mützerich"]));
+//output(getSentence(["Ich","bin","Maxine","Mützerich"]));
 function getSentence(arr) {
 
     const gap  = " ";
