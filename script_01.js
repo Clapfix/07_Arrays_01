@@ -38,8 +38,44 @@
 //     output("index i :" +i);    
 // }
 
+/* 02b. For-Schleife für Array-Index (Iteration)*/
+// let arr = ["Ich","bin","die","coole","Maxine","Mützerich"];
+// for (let i = 0; i < arr.length; i++) {
+// output(arr[i]);
+// }
 
+/****** Überlegung - Transportierung *******/
 
+/** Einer Variablen kann Ihr eigener Wert zugewiesen werden.
+Solange die Variable existiert, bleibt dieser erhalten.
+hier aufsummierung
+*/
+
+// let str    = "";
+// let gap    = " ";
+// let addStr = "Test";
+// for (let i = 0; i <= 5; i++) {
+//     //output("in der loop:" + str);   
+//     str = str + addStr + gap
+// }
+//     output("nach der loop: " + str);
+
+// let a = 0;          // Anfangswert
+// output("inhalt von a:" + a)
+// a = a +1;           // a = 0 + 1
+// output("inhalt von a:" + a)
+// a = a +1;           // a = 1 + 1
+// output("inhalt von a:" + a)
+// a = a +1;           // a = 2 + 1
+// output("inhalt von a:" + a)
+
+/** Besser: mit FOR-Schleife */
+// let a = 0;
+// for (let i = 0; i <= 10; i++) {
+//     output("in der loop:" + a);
+//     a = a + 1;    
+// }
+//     output("nach der loop: " + a)
 
 
 /** 01. Funktionalität mit Einzelparametern  */
@@ -76,6 +112,35 @@ function getSentence(arr) {
     return str;
 }
 
+/*** 01b. Funktionalität mit Array 2 */
+// Transponierung: untereinander ---> nebeneinander
+// Helge Schneider: Anananananderreihung
+
+output(getSentenceArr2(["Ich","bin","Maxine","Mützerich"]));
+output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+output(getSentenceArr2(["Ich","bin","Max"]));
+output(getSentenceArr2([]));
+function getSentenceArr2(arr) {
+
+    const gap  = " ";
+    const pnct = ".";
+    let str = "";
+
+    if (arr.length == 0) {
+        return "Keine Daten vorhanden";
+        
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (i !=arr.length -1) {
+            str = str + arr[i] + gap  
+        } else {
+            str = str + arr[i] + pnct 
+        } 
+}      
+    return str;
+}
 
 // Modul: Ausgabe in Konsole : Test
 //output("hi"); 
